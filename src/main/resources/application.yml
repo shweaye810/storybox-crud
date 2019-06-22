@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+  security:
+    user:
+      password: test
+      name: test
+      
+server:
+  port: 9000
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:1000/auth-server/oauth/user
+    client:
+      client-id: storybox
+      client-secret: storybox-super-secure
+      
