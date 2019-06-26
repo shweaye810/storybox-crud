@@ -1,4 +1,6 @@
+
 spring:
+  profiles: local
   data:
     mongodb:
       host: localhost
@@ -19,3 +21,10 @@ security:
       client-id: storybox
       client-secret: storybox-super-secure
       
+--- 
+spring:
+  profiles: test
+    
+  data:
+    mongodb:
+      port: 3333
