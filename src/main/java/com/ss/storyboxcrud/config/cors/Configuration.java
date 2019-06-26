@@ -1,4 +1,4 @@
-package com.ss.storyboxcrud;
+package com.ss.storyboxcrud.config.cors;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.mapping.event.ValidatingMongoEventListener;
