@@ -8,6 +8,7 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.ss'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 configurations {
 	developmentOnly
@@ -22,6 +23,10 @@ repositories {
 
 ext {
 	set('springCloudVersion', "Finchley.RELEASE")
+}
+
+test {
+	systemProperty "spring.profiles.active", "test"
 }
 
 dependencies {
@@ -39,6 +44,8 @@ dependencies {
 	
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	
 }
 
 dependencyManagement {
